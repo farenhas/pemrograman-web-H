@@ -1,134 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Page Title</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
+    <title>Faren Haseena</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
-  body {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  }
+        body {
+            margin: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+        }
 
-  .header {
-    padding: 40px;
-    text-align: center;
-    background: darkolivegreen;
-    color: black;
-  }
+        .container {
+            line-height: 150%;
+        }
 
-  .header h1 {
-    font-size: 20px;
-  }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            background-color: #e9e9e9;
+        }
 
-  .navbar {
-    background-color: grey;
-    text-align: center;
-  }
+        .header h1 {
+            color: #222222;
+            font-size: 30px;
+            font-family: 'Pacifico', cursive;
+        }
 
-  .navbar a {
-    display: inline-block;
-    color: black;
-    text-decoration: none;
-    padding: 14px 20px;
-  }
+        .header .social a {
+            padding: 0 5px;
+            color: #222222;
+        }
 
-  .navbar a.right {
-    float: right;
-  }
+        .left {
+            float: left;
+            width: 180px;
+            margin: 0;
+            padding: 1em;
+        }
 
-  .navbar a:hover {
-    background-color: lightslategray;
-    color: black;
-  }
+        .content {
+            margin-left: auto; 
+            border-left: 1px solid #d4d4d4;
+            padding: 1em;
+            overflow: hidden;
+        }
 
-  .row {
-    display: flex;
-    flex-wrap: wrap;
-  }
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
 
-  .side {
-    flex: 30%;
-    background-color: lightgoldenrodyellow;
-    padding: 20px;
-  }
+        li a {
+            display: block;
+            color: #000;
+            padding: 8px 16px;
+            text-decoration: none;
+        }
 
-  .main {
-    flex: 70%;
-    background-color: white;
-    padding: 20px;
-  }
+        li a.active {
+            background-color:lightsalmon;
+            color: white;
+        }
 
-  .fakeimg {
-    background-color: whitesmoke;
-    width: 50%;
-    padding: 15px;
-  }
+        li a:hover:not(.active) {
+            background-color: #29292a;
+            color: white;
+        }
 
-  .footer {
-    padding: 20px;
-    text-align: center;
-    background: whitesmoke;
-  }
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+            margin: 30px 0;
+        }
 
-  @media screen and (max-width: 700px) {
-    .row {
-      flex-direction: column;
-    }
-  }
+        td, th {
+            border: 1px solid #dddddd;
+            padding: 8px;
+        }
 
-  @media screen and (max-width: 400px) {
-    .navbar a {
-      float: none;
-      width: 100%;
-    }
-  }
-</style>
+        tr:nth-child(1) {
+            background-color: lightsalmon;
+            color: white;
+        }
+
+        tr td i.fas {
+            display: block;
+            font-size: 35px;
+            text-align: center;
+        }
+
+        .footer {
+            padding: 55px 20px;
+            background-color: #2e3550;
+            color: white;
+            text-align: center;
+        }
+
+        form {
+            text-align: center;
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        form input[type="text"],
+        form input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        form input[type="submit"] {
+            background-color: lightsalmon;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        form input[type="submit"]:hover {
+            background-color: #29292a;
+        }
+    </style>
 </head>
 <body>
-
-<div class="header">
-  <h1>Welcome to My Website</h1>
-  <p>Faren Haseena.</p>
+<div class="container">
+    <header class="header">
+       
+        <div class="social">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+    </header>
+    <aside class="left">
+        <ul>
+            <li><a class="active" href="#home">Home</a></li>
+            <li><a href="#career">Career</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+    </aside>
+    <main class="content">
+        <h2>Welcome to My Website</h2>
+        <p> </p>
+        <form>
+            <label>Email: <input type="text" name="email"></label><br>
+            <label>Password: <input type="password" name="password"></label><br>
+            <input type="submit" value="Login"><br>
+        </form>
+    </main>
+    <footer class="footer">Thank you</footer>
 </div>
-
-<div class="navbar">
-  <a href="www.youtube.com">Link</a>
-  <a href="www.google.com" class="right">Link</a>
-</div>
-
-<div class="row">
-  <div class="side">
-    <h2>Hello!</h2>
-    <h5>Photo of me:</h5>
-    <div class="img">
-      <img src="manusia.jpg" alt="pict1" style="height:450px;">
-      <img src="foto" alt="pict2">
-    </div>
-    
-    <p>Description about me</p>
-  </div>
-
-  <div class="main">
-    <h2>If You need more information</h2>
-    <form>
-      <label for="username">Username</label><br>
-      <input type="text" id="username" name="username"><br>
-      <label for="password">Password</label><br>
-      <input type="password" id="password" name="password"><br>
-      <input type="submit" value="Submit">
-    </form>
-  </div>
-</div>
-
-<div class="footer">
-  <h2>Thank You</h2>
-</div>
-
 </body>
 </html>
